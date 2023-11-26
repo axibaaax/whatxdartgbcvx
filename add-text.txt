@@ -1,0 +1,26 @@
+ ///*增加斜的文字，可以拖动的！*/
+            if( this.cb_slope.Checked == true)
+            {
+                double x_avg = (x_min + x_max) / 2;
+                double y_avg = (y_min + y_max) / 3 * 1;
+                var slope1_txt = plot.AddText("slope=1", x_avg, y_avg, size: 8, color: Color.Black);
+                slope1_txt.Font.Color = Color.Black; ;
+                slope1_txt.BackgroundColor = Color.LightSteelBlue;
+                slope1_txt.BackgroundFill = true;
+                slope1_txt.Rotation = -45;
+                slope1_txt.BorderSize = 1;
+                slope1_txt.BorderColor = Color.Navy;
+                slope1_txt.DragEnabled = true;
+
+                x_avg = (x_min + x_max) / 2;
+                y_avg = (y_min + y_max) / 3 * 2;
+                var slope3_txt = plot.AddText("slope=3", x_avg, y_avg, size: 8, color: Color.Black);
+                slope3_txt.Font.Color = Color.Black; ;
+                slope3_txt.BackgroundColor = Color.LightSteelBlue;
+                slope3_txt.BackgroundFill = true;
+                slope3_txt.Rotation = -72;
+                slope3_txt.BorderSize = 1;
+                slope3_txt.BorderColor = Color.Navy;
+                slope3_txt.DragEnabled = true;
+
+            }
