@@ -1,9 +1,3 @@
-# @Coding：utf-8
-# @Time:2024/1/3 18:59
-# @Author: yfgu
-# @File: Driver_document.py
-# @Version:
-
 import re
 
 
