@@ -23,237 +23,501 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QComboBox" name="cb_parallel_num">
+   <widget class="QGroupBox" name="gb_device_info">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>30</y>
-      <width>87</width>
-      <height>23</height>
+      <x>20</x>
+      <y>50</y>
+      <width>421</width>
+      <height>411</height>
      </rect>
     </property>
-    <item>
-     <property name="text">
-      <string>1</string>
+    <property name="title">
+     <string>器件参数设置</string>
+    </property>
+    <widget class="QLineEdit" name="txt_device_name">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>30</y>
+       <width>201</width>
+       <height>24</height>
+      </rect>
      </property>
-    </item>
-    <item>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>40</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Device Name</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Taskflow Path</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txt_taskflow">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>80</y>
+       <width>201</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>140</y>
+       <width>151</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ini-model Path</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txt_ini_model">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>130</y>
+       <width>201</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txt_silicon_data">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>180</y>
+       <width>201</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>180</y>
+       <width>151</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Silicon-data Path</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txt_parameter_shift">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>230</y>
+       <width>201</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>161</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>parameters_shift Path</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="gb_simulate_info">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>50</y>
+      <width>261</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>仿真参数设置</string>
+    </property>
+    <widget class="QComboBox" name="cb_simulate_option">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>100</y>
+       <width>87</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>DC</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>81</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>仿真选项</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>81</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>仿真器</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cb_simulator_select">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>50</y>
+       <width>87</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>hspice</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>spectre</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="cb_parallel_num">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>150</y>
+       <width>87</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>10</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>150</y>
+       <width>81</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>并行数</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="cb_show_print">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>260</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string> 显示命令窗信息</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>200</y>
+       <width>81</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>仿真速率</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cb_simulate_option_2">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>200</y>
+       <width>87</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>normal</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>fast</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QCheckBox" name="cb_save_png">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>290</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string> 保存仿真图片</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="gb_optimize_info">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>50</y>
+      <width>271</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>优化策略设置</string>
+    </property>
+    <widget class="QLineEdit" name="txt_loss_goal">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>190</y>
+       <width>81</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.3</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txt_optimize_iter">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>100</y>
+       <width>81</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>3</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>81</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>迭代次数</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>190</y>
+       <width>81</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>损失目标</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cb_optimize_select">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>50</y>
+       <width>87</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>DE</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>81</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>优化算法</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txt_optimize_popsize">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>140</y>
+       <width>81</width>
+       <height>24</height>
+      </rect>
+     </property>
      <property name="text">
       <string>5</string>
      </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>10</string>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>81</width>
+       <height>18</height>
+      </rect>
      </property>
-    </item>
-   </widget>
-   <widget class="QComboBox" name="cb_simulator_select">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>60</y>
-      <width>87</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <item>
      <property name="text">
-      <string>hspice</string>
+      <string>种群大小</string>
      </property>
-    </item>
-    <item>
+    </widget>
+    <widget class="QCheckBox" name="cb_save_loss_log">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>260</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
      <property name="text">
-      <string>spectre</string>
+      <string> 保存损失过程</string>
      </property>
-    </item>
+    </widget>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QGroupBox" name="gb_button_info">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>30</y>
-      <width>81</width>
-      <height>18</height>
+      <y>500</y>
+      <width>1001</width>
+      <height>181</height>
      </rect>
     </property>
-    <property name="text">
-     <string>并行数</string>
+    <property name="title">
+     <string>功能区</string>
     </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>60</y>
-      <width>81</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>仿真器</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>100</y>
-      <width>81</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>仿真选项</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="cb_simulate_option">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>100</y>
-      <width>87</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <item>
+    <widget class="QPushButton" name="btn_simulate">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>50</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
      <property name="text">
-      <string>DC</string>
+      <string>仿真</string>
      </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>140</y>
-      <width>81</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>优化算法</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="cb_optimize_select">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>140</y>
-      <width>87</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <item>
+    </widget>
+    <widget class="QPushButton" name="btn_import_setting">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>50</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
      <property name="text">
-      <string>DE</string>
+      <string>导入设置</string>
      </property>
-    </item>
-   </widget>
-   <widget class="QLineEdit" name="txt_optimize_max_num">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>190</y>
-      <width>81</width>
-      <height>24</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>190</y>
-      <width>81</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>迭代次数</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>230</y>
-      <width>81</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>损失目标</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txt_loss_goal">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>230</y>
-      <width>81</width>
-      <height>24</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txt_device_name">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>270</y>
-      <width>81</width>
-      <height>24</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>270</y>
-      <width>81</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>器件名称</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_simulate">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>390</y>
-      <width>171</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>仿真</string>
-    </property>
-   </widget>
-   <widget class="QListView" name="listView">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>50</y>
-      <width>311</width>
-      <height>371</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_import_setting">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>340</y>
-      <width>171</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>导入设置</string>
-    </property>
+    </widget>
+    <widget class="QPushButton" name="btn_do_optimize">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>50</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>优化</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_do_model_merge">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>50</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>模型整合</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -262,7 +526,7 @@
      <x>0</x>
      <y>0</y>
      <width>1113</width>
-     <height>18</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
